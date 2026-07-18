@@ -41,26 +41,34 @@ body {
 }
 
 /* --- The floating white sheet (Twenty Sixteen signature) ---------------- */
-/* The masthead (navbar) and the content share one centred white column that
-   floats on the grey page, matching .site { background:#fff } + margin:21px. */
-.navbar {
-  background-color: var(--content-bg) !important;
+/* The masthead, content and footer share one centred white column that floats
+   on the grey page, matching .site { background:#fff } + margin:21px. */
+.site-header {
+  background-color: var(--content-bg);
   max-width: var(--sheet-max);
   margin: 21px auto 0;
-  border: 0;
+  padding: 1.75rem clamp(1.25rem, 5vw, 3.5rem) 1.5rem;
   border-bottom: 1px solid var(--rule);
-  border-radius: 0;
-  padding: 1.5rem clamp(1.25rem, 5vw, 3.5rem);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
 }
+
+/* Custom header image (Twenty Sixteen banner) */
+.header-image { margin: 0 0 1.75rem; line-height: 0; }
+.header-image img { display: block; width: 100%; height: auto; }
 
 .main-container,
 .container-fluid.main-container {
   background-color: var(--content-bg);
   max-width: var(--sheet-max);
+  margin: 0 auto;
+  padding: 2.25rem clamp(1.25rem, 5vw, 3.5rem) 3rem;
+}
+
+.site-footer {
+  background-color: var(--content-bg);
+  max-width: var(--sheet-max);
   margin: 0 auto 21px;
-  padding: 2.75rem clamp(1.25rem, 5vw, 3.5rem) 3.25rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  padding: 2rem clamp(1.25rem, 5vw, 3.5rem) 2.5rem;
+  border-top: 1px solid var(--rule);
 }
 
 /* Body copy sits on a readable measure; headings + rules run full width. */
@@ -226,48 +234,95 @@ hr {
 }
 .contact-card p { margin: 0.4rem 0; max-width: none; }
 
-/* --- Navbar (Montserrat masthead) -------------------------------------- */
-.navbar .navbar-brand {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
-  font-size: 2rem;                /* custom CSS enlarges .site-title (3rem masthead) */
-  font-weight: 700;
-  line-height: 1.2173913043;
-  color: #333333 !important;      /* custom CSS: .site-title a { color:#333 } */
-}
-.navbar .nav-link {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--ink) !important;
-  padding: 0.5rem 0.875rem;
-}
-.navbar .nav-link:hover,
-.navbar .nav-link.active { color: var(--link) !important; }
-.navbar-toggler { border-color: var(--rule); }
+/* --- Masthead: site title, tagline, primary menu (Twenty Sixteen) ------- */
+.site-header-main { position: relative; }
 
-/* --- Footer ------------------------------------------------------------ */
-.rp-footer {
-  max-width: var(--sheet-max);
-  margin: 0 auto 21px;
-  padding: 2.5rem clamp(1.25rem, 5vw, 3.5rem);
-  background: var(--content-bg);
-  border-top: 1px solid var(--rule);
+.site-title {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 3rem;                /* custom CSS: .site-title { font-size:3rem } */
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+.site-title a,
+.site-title a:hover,
+.site-title a:focus {
+  color: #333333;                 /* custom CSS: .site-title a { color:#333 } */
+  text-decoration: none;
+}
+.site-description {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
   color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
+.main-navigation {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+.main-navigation .primary-menu {
+  margin: 25px 0 0 0;             /* custom CSS: .main-navigation ul { margin:25px 0 0 0 } */
+  padding: 0;
+  list-style: none;
+}
+.main-navigation li { display: inline-block; margin: 0 1.5em 0 0; }
+.main-navigation a {
+  display: inline-block;
+  padding: 0.3em 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.main-navigation a:hover,
+.main-navigation a:focus { color: var(--link); text-decoration: underline; }
+
+.menu-toggle {
+  display: none;                  /* shown on small screens only */
+  margin-top: 1.25rem;
+  background: var(--ink);
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.046875em;
+  padding: 0.7em 1em;
+  cursor: pointer;
+}
+.menu-toggle:hover { background: var(--link); }
+
+/* --- Footer (Twenty Sixteen .site-info) -------------------------------- */
+.site-info {
   font-family: Montserrat, "Helvetica Neue", sans-serif;
   font-size: 0.8125rem;
+  line-height: 1.75;
+  color: var(--muted);
   text-align: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
-.rp-footer a { color: var(--muted); }
-.rp-footer a:hover { color: var(--link); }
+.site-info a { color: var(--muted); }
+.site-info a:hover { color: var(--link); }
+.footer-navigation { margin-bottom: 0.75rem; }
+.footer-contact { margin: 0 0 0.35rem; }
+.footer-note { margin: 0; }
 
 /* --- Quality floor ----------------------------------------------------- */
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 img { max-width: 100%; height: auto; }
 
+/* --- Small screens: collapse the menu behind the toggle ---------------- */
+@media (max-width: 44rem) {
+  .menu-toggle { display: inline-block; }
+  .main-navigation .menu-primary-container { display: none; }
+  .main-navigation.toggled .menu-primary-container { display: block; }
+  .main-navigation .primary-menu { margin-top: 1rem; }
+  .main-navigation li { display: block; margin: 0; border-top: 1px solid var(--rule); }
+  .main-navigation a { display: block; padding: 0.7em 0; }
+}
+
 @media (max-width: 34rem) {
-  .navbar, .main-container, .rp-footer { margin-left: 8px; margin-right: 8px; }
+  .site-header, .main-container, .site-footer { margin-left: 8px; margin-right: 8px; }
+  .site-title { font-size: 2.25rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }

@@ -1,22 +1,11 @@
 name: "renaissance-press"
 output_dir: "_site"
-exclude: ["build.R", "theme.R", "README.md", "head.html", "footer.html", "*.Rproj"]
+exclude: ["build.R", "theme.R", "README.md", "head.html", "header.html", "footer.html", "*.Rproj"]
 
-navbar:
-  title: "Renaissance Press"
-  type: default
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "Books"
-      href: books.html
-    - text: "Prints"
-      href: prints.html
-    - text: "Folios"
-      href: folios.html
-  right:
-    - text: "Contact"
-      href: contact.html
+# The site masthead and footer are hand-built partials (header.html / footer.html)
+# that mirror the WordPress "Twenty Sixteen" markup (site-header / site-footer),
+# injected via the includes below — so there is no auto-generated Bootstrap
+# navbar.
 
 # The `theme:` block below is a bslib::bs_theme() specification expressed in YAML.
 # rmarkdown passes it straight to bslib, so the WordPress "Twenty Sixteen" fonts
@@ -45,6 +34,7 @@ output:
     css: styles.css
     includes:
       in_header: head.html
+      before_body: header.html
       after_body: footer.html
     toc: false
     self_contained: false

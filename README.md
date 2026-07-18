@@ -55,3 +55,56 @@ custom_css belongs to the unused `twentynineteen` theme and was ignored):
 
 `_site.yml` carries the theme as a bslib spec (YAML); `theme.R` is the same as R
 code; `styles.css` reproduces the layout + the overrides above.
+
+### Header & footer partials
+
+The site masthead and footer mirror the Twenty Sixteen markup rather than using a
+generic Bootstrap navbar:
+
+- **`header.html`** — `<header class="site-header">` with the custom header
+  **banner image** (`assets/cropped-Untitled-design-1.png`), the site title
+  ("Renaissance Press"), the tagline ("Edinburgh, Scotland"), and the primary
+  **Main** menu from the export (Home · Books · Prints · Folios · Contact us).
+  Includes a mobile menu toggle.
+- **`footer.html`** — `<footer class="site-footer">` with a `.site-info` block
+  (footer menu, contact line, and memorial note).
+
+Both are injected via `_site.yml` (`before_body` / `after_body`), so the auto
+Bootstrap navbar is disabled. A tiny script in `header.html` rewrites the menu
+links **and the banner image `src`** for pages in sub-folders (`products/`,
+`people/`) so they resolve at any depth, and drives the mobile toggle. `head.html` remains the `<head>` include
+(meta + font preconnect).
+
+## Reconciliation notes (what changed after the export)
+
+- **Contact corrected.** The export's current address is *c/o 59 Hunter Rd,
+  Milngavie, G62 7DJ · (+44) 07813 309150*. The earlier Edinburgh/Warriston
+  address (from a stale cache) has been removed.
+- **Prints/Folios corrected.** The Elizabeth Blackadder prints and the two £45
+  folios in my first draft were from old cached pages and are **not** in the
+  current shop. Prints/Folios now show only the two Bruce & Bellany portfolios,
+  as in the export.
+- **Home page** now leads with the news of Lucina Prestige's passing, matching
+  the live "From the press" page.
+- **Stock:** *An Eye on the Street* is marked out of stock (and its own page notes
+  it is no longer available through Renaissance Press — contact Street Level
+  Photoworks).
+- **Prices** display the real WooCommerce values (£7.99–£10.00 for books; the
+  portfolios are £2,000 / £1,500 with individual etchings £400 / £250).
+
+## Please check before publishing
+
+1. **Images** are referenced from the live `renaissancepress.co.uk/wp-content/…`
+   URLs (from the export). For a fully self-contained site, download the 52
+   attachments into an `assets/` folder and repoint the `<img src>`/`![]()` paths.
+2. **A stale phone number** (`0131 556 3118`) is embedded in the *Woman of the
+   North Sea* and *The Sacred Sea* product descriptions — this is your original
+   copy, left verbatim. Update it to the Milngavie number if you wish.
+3. **Cart/checkout** are omitted (this is static); product pages link to
+   "Order or enquire" → Contact, matching the portfolios' existing guidance.
+   For a live basket, a commerce backend (e.g. Snipcart) can be added.
+4. **Customer orders** (107 `shop_order` records in the export) were deliberately
+   **not** used — they contain personal data and don't belong on a public site.
+5. **Nav** matches the live primary menu (Home · Books · Prints · Folios ·
+   Contact). Artists & Authors and the memorial are reached from the home page
+   and footer, as on the live site.
