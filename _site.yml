@@ -1,0 +1,54 @@
+name: "renaissance-press"
+output_dir: "_site"
+exclude: ["build.R", "theme.R", "README.md", "head.html", "footer.html", "*.Rproj"]
+
+navbar:
+  title: "Renaissance Press"
+  type: default
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Books"
+      href: books.html
+    - text: "Prints"
+      href: prints.html
+    - text: "Folios"
+      href: folios.html
+  right:
+    - text: "Contact"
+      href: contact.html
+
+# The `theme:` block below is a bslib::bs_theme() specification expressed in YAML.
+# rmarkdown passes it straight to bslib, so the WordPress "Twenty Sixteen" fonts
+# and colours are captured through Bootstrap 5. Twenty Sixteen's layout
+# signature (the white sheet floating on a grey page, hairline rules, catalogue
+# cards) lives in styles.css. See theme.R for the identical theme as R code.
+output:
+  html_document:
+    theme:
+      version: 5
+      bg: "#ffffff"          # content sheet — .site { background:#fff }
+      fg: "#1a1a1a"          # body text color
+      primary: "#666666"     # custom CSS: a { color:#666 } (overrides theme blue)
+      secondary: "#686868"   # muted grey
+      base_font:
+        google: "Merriweather"
+      heading_font:
+        google: "Montserrat"
+      code_font:
+        google: "Inconsolata"
+      "font-size-base": "1rem"      # 16px
+      "line-height-base": "1.75"
+      "headings-font-weight": "700"
+      "border-color": "#d1d1d1"
+      "link-decoration": "none"
+    css: styles.css
+    includes:
+      in_header: head.html
+      after_body: footer.html
+    toc: false
+    self_contained: false
+    section_divs: true
+    fig_caption: true
+    highlight: null
+    mathjax: null

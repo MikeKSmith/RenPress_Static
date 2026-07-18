@@ -1,0 +1,274 @@
+/* ============================================================================
+   Renaissance Press — faithful reproduction of the WordPress "Twenty Sixteen"
+   theme (style.css v1.7, default colour scheme), layered on the bslib
+   (Bootstrap 5) theme. Fonts + core colours are set in _site.yml / theme.R;
+   this file reproduces Twenty Sixteen's layout signature (the white content
+   "sheet" floating on a grey page), its Montserrat/Merriweather typography,
+   blue links, and hairline rules.
+
+   Tokens taken directly from the supplied CSS:
+     text        #1a1a1a      links        #007acc
+     link hover  #686868      hairline/hr  #d1d1d1
+     content bg  #ffffff      page bg      #d5d5d5  (TwentySixteen default)
+     body   Merriweather, Georgia, serif   16px / line-height 1.75
+     head   Montserrat, "Helvetica Neue", sans-serif   weight 700
+     button #1a1a1a -> #007acc, radius 2px, letter-spacing 0.046875em
+   ========================================================================= */
+
+:root {
+  --ink:        #1a1a1a;
+  --content-bg: #ffffff;
+  --page-bg:    #d5d5d5;   /* Twenty Sixteen default custom-background */
+  --link:       #666666;   /* custom CSS: a { color:#666 } */
+  --link-hover: #666666;
+  --muted:      #686868;
+  --rule:       #d1d1d1;
+  --sheet-max:  1320px;    /* .site-inner max-width */
+  --measure:    46rem;     /* comfortable reading measure */
+}
+
+/* --- Base rhythm -------------------------------------------------------- */
+html { background-color: var(--page-bg); }
+
+body {
+  color: var(--ink);
+  background-color: var(--page-bg);
+  font-family: Merriweather, Georgia, serif;
+  font-size: 1rem;          /* 16px */
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- The floating white sheet (Twenty Sixteen signature) ---------------- */
+/* The masthead (navbar) and the content share one centred white column that
+   floats on the grey page, matching .site { background:#fff } + margin:21px. */
+.navbar {
+  background-color: var(--content-bg) !important;
+  max-width: var(--sheet-max);
+  margin: 21px auto 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 1.5rem clamp(1.25rem, 5vw, 3.5rem);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.main-container,
+.container-fluid.main-container {
+  background-color: var(--content-bg);
+  max-width: var(--sheet-max);
+  margin: 0 auto 21px;
+  padding: 2.75rem clamp(1.25rem, 5vw, 3.5rem) 3.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Body copy sits on a readable measure; headings + rules run full width. */
+main > p, main > ul:not(.catalogue), main > ol, main > blockquote,
+.main-container > p, .main-container > ul:not(.catalogue), .main-container > ol {
+  max-width: var(--measure);
+}
+
+/* --- Headings (Montserrat, 700) ---------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: #333333;               /* custom CSS: h1–h4 { color:#333 } */
+  clear: both;
+}
+
+h1 {                              /* page title */
+  font-size: 1.75rem;             /* 28px, Twenty Sixteen entry-title */
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+h2 {
+  font-size: 1.75rem;             /* 28px */
+  line-height: 1.25;
+  margin-top: 2em;
+}
+h3 {
+  font-size: 1.4375rem;           /* 23px */
+  line-height: 1.2173913043;
+  margin-top: 2.4347826087em;
+}
+h4 { font-size: 1.125rem; margin-top: 2em; }
+
+/* Eyebrow / meta label — Montserrat, letter-spaced, muted. */
+.eyebrow {
+  display: inline-block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.146875em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.lede {
+  font-size: 1.3125rem;           /* 21px */
+  line-height: 1.5;
+  color: #333;
+  max-width: 42rem;
+}
+
+/* --- Links ------------------------------------------------------------- */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover, a:focus, a:active { color: var(--link-hover); text-decoration: underline; }
+
+/* --- Rules ------------------------------------------------------------- */
+hr {
+  background-color: var(--rule);
+  border: 0;
+  height: 1px;
+  margin: 2.75em 0;
+}
+
+/* --- Page header ------------------------------------------------------- */
+.hero {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.25rem;
+}
+
+/* --- Buttons (Twenty Sixteen) ------------------------------------------ */
+.btn, button, input[type="submit"] {
+  background: var(--ink);
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.046875em;
+  padding: 0.84375em 0.875em 0.78125em;
+}
+.btn:hover, button:hover, input[type="submit"]:hover { background: var(--link); color: #fff; }
+
+/* --- Catalogue grid + cards -------------------------------------------- */
+.catalogue {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 1.75rem 1.5rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  max-width: none;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.4rem 1.5rem;
+  background: var(--content-bg);
+  border: 1px solid var(--rule);
+}
+.item h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.1875rem;           /* 19px */
+  line-height: 1.25;
+  margin-top: 0;
+}
+.item .by {
+  font-family: Merriweather, Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+.item .note {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 1rem;
+  max-width: none;
+}
+.item .meta {
+  margin-top: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--rule);
+}
+.price {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1875rem;
+  color: #000000;               /* custom CSS: .price { color:#000 } */
+}
+.price--sold {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+.tag {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- Contact block ----------------------------------------------------- */
+.contact-card {
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--link);
+  padding: 1.5rem 1.75rem;
+  background: var(--content-bg);
+  max-width: 34rem;
+}
+.contact-card p { margin: 0.4rem 0; max-width: none; }
+
+/* --- Navbar (Montserrat masthead) -------------------------------------- */
+.navbar .navbar-brand {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 2rem;                /* custom CSS enlarges .site-title (3rem masthead) */
+  font-weight: 700;
+  line-height: 1.2173913043;
+  color: #333333 !important;      /* custom CSS: .site-title a { color:#333 } */
+}
+.navbar .nav-link {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink) !important;
+  padding: 0.5rem 0.875rem;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: var(--link) !important; }
+.navbar-toggler { border-color: var(--rule); }
+
+/* --- Footer ------------------------------------------------------------ */
+.rp-footer {
+  max-width: var(--sheet-max);
+  margin: 0 auto 21px;
+  padding: 2.5rem clamp(1.25rem, 5vw, 3.5rem);
+  background: var(--content-bg);
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 0.8125rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+.rp-footer a { color: var(--muted); }
+.rp-footer a:hover { color: var(--link); }
+
+/* --- Quality floor ----------------------------------------------------- */
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+img { max-width: 100%; height: auto; }
+
+@media (max-width: 34rem) {
+  .navbar, .main-container, .rp-footer { margin-left: 8px; margin-right: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
