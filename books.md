@@ -1,89 +1,91 @@
 ---
-title: "Books — Renaissance Press"
+title: "Books"
 ---
 
-<div class="hero">
-<span class="eyebrow">Catalogue</span>
+::: hero
+Catalogue
 
 # Books
-</div>
+:::
 
 Poetry and art in collaboration.
 
-<ul class="catalogue">
+::: catalogue
 
-<li class="item">
-  <h3><a href="products/letters-from-the-winding-nile-in-1857-william-kidston-writes-home.html">Letters from the Winding Nile</a></h3>
-  <p class="by">In 1857, William Kidston writes home</p>
-  <p class="note">A Glasgow businessman's letters from an 1856 expedition to Egypt
-  and the Holy Land.</p>
-  <div class="meta"><span class="price">£9.99</span><span class="tag">Book</span></div>
-</li>
+::: item
+### [Letters from the Winding Nile](letters-from-the-winding-nile-in-1857-william-kidston-writes-home.html)
 
-<li class="item">
-  <h3><a href="products/thirteen-ways-of-looking-at-tulips.html">Thirteen ways of looking at Tulips</a></h3>
-  <p class="by">Alan Spence, illustrated by Elizabeth Blackadder</p>
-  <p class="note">A beautiful sequence of tulip haiku (2022).</p>
-  <div class="meta"><span class="price">£7.99</span><span class="tag">Book</span></div>
-</li>
+In 1857, William Kidston writes home
 
-<li class="item">
-  <h3><a href="products/morning-glory.html">Morning Glory</a></h3>
-  <p class="by">Alan Spence, illustrated by Elizabeth Blackadder</p>
-  <p class="note">A sequence of haiku and tanka — a follow-up to <em>Through the
-  Letterbox</em>.</p>
-  <div class="meta"><span class="price">£9.99</span><span class="tag">Book</span></div>
-</li>
+A Glasgow businessman's letters from an 1856 expedition to Egypt and the Holy Land.
+:::
 
-<li class="item">
-  <h3><a href="products/through-the-letterbox.html">Through the Letterbox</a></h3>
-  <p class="by">George Bruce, illustrated by Elizabeth Blackadder</p>
-  <p class="note">The book that began the Press: 157 haiku, 143 images.</p>
-  <div class="meta"><span class="price">£9.99</span><span class="tag">Book</span></div>
-</li>
+::: item
+### [Thirteen ways of looking at Tulips](thirteen-ways-of-looking-at-tulips.html)
 
-<li class="item">
-  <h3><a href="products/a-brush-with-burns.html">A Brush with Burns</a></h3>
-  <p class="by">Robert Burns, illustrated by Elizabeth Blackadder</p>
-  <p class="note">The words of the Scots bard, illustrated in Blackadder's own
-  original manner.</p>
-  <div class="meta"><span class="price">£9.99</span><span class="tag">Book</span></div>
-</li>
+Alan Spence, illustrated by Elizabeth Blackadder
 
-<li class="item">
-  <h3><a href="products/the-singing-of-the-foxes.html">The Singing of the Foxes</a></h3>
-  <p class="by">George Bruce, illustrations by John Bellany</p>
-  <p class="note">Bruce's final and uncollected poems (2007).</p>
-  <div class="meta"><span class="price">£9.99</span><span class="tag">Book</span></div>
-</li>
+A beautiful sequence of tulip haiku (2022).
+:::
 
-<li class="item">
-  <h3><a href="products/today-tomorrow.html">Today Tomorrow</a></h3>
-  <p class="by">George Bruce — collected poems 1933–2000</p>
-  <p class="note">A lifetime's poems, from a Scottish fishing port to the great
-  painters of the world.</p>
-  <div class="meta"><span class="price">£10.00</span><span class="tag">Book</span></div>
-</li>
+::: item
+### [Morning Glory](morning-glory.html)
 
-<li class="item">
-  <h3><a href="products/greatrex-forger-and-photographer.html">Greatrex — Forger and Photographer</a></h3>
-  <p class="by">David Bruce</p>
-  <p class="note">The true, disreputable tale of John Henry Greatrex (1827–76).</p>
-  <div class="meta"><span class="price">£9.99</span><span class="tag">Book</span></div>
-</li>
+Alan Spence, illustrated by Elizabeth Blackadder
 
-<li class="item">
-  <h3><a href="products/an-eye-on-the-street.html">An Eye on the Street</a></h3>
-  <p class="by">David Peat</p>
-  <p class="note">Glasgow photographed in 1968. No longer available through
-  Renaissance Press.</p>
-  <div class="meta"><span class="price price--sold">£9.99</span><span class="tag">Out of stock</span></div>
-</li>
+A sequence of haiku and tanka — a follow-up to *Through the Letterbox*.
+:::
 
-</ul>
+::: item
+### [Through the Letterbox](through-the-letterbox.html)
 
-<hr>
+George Bruce, illustrated by Elizabeth Blackadder
 
-<p><a href="prints.html">Prints →</a> &nbsp;·&nbsp;
-<a href="folios.html">Folios →</a> &nbsp;·&nbsp;
-<a href="contact.html">Order without PayPal →</a></p>
+The book that began the Press: 157 haiku, 143 images.
+:::
+
+::: item
+### [A Brush with Burns](a-brush-with-burns.html)
+
+Robert Burns, illustrated by Elizabeth Blackadder
+
+The words of the Scots bard, illustrated in Blackadder's own original manner.
+:::
+
+::: item
+### [The Singing of the Foxes](the-singing-of-the-foxes.html)
+
+George Bruce, illustrations by John Bellany
+
+Bruce's final and uncollected poems (2007).
+:::
+
+::: item
+### [Today Tomorrow](today-tomorrow.html)
+
+George Bruce — collected poems 1933–2000
+
+A lifetime's poems, from a Scottish fishing port to the great painters of the world.
+:::
+
+::: item
+### [Greatrex — Forger and Photographer](greatrex-forger-and-photographer.html)
+
+David Bruce
+
+The true, disreputable tale of John Henry Greatrex (1827–76).
+:::
+
+::: item
+### [An Eye on the Street](an-eye-on-the-street.html)
+
+David Peat
+
+Glasgow photographed in 1968. No longer available through Renaissance Press.
+:::
+
+:::
+
+---
+
+[Prints →](prints.html) · [Folios →](folios.html) · [Order without PayPal →](contact.html)

@@ -1,11 +1,22 @@
 name: "renaissance-press"
 output_dir: "_site"
-exclude: ["build.R", "theme.R", "README.md", "head.html", "header.html", "footer.html", "*.Rproj"]
+exclude: ["build.R", "theme.R", "README.md", "README.html", "README_files",
+          "AGENTS.md", "LICENSE", "head.html", "header.html", "footer.html",
+          "*.Rproj"]
 
 # The site masthead and footer are hand-built partials (header.html / footer.html)
 # that mirror the WordPress "Twenty Sixteen" markup (site-header / site-footer),
 # injected via the includes below — so there is no auto-generated Bootstrap
 # navbar.
+#
+# Every page's own content is plain Markdown: a handful of Pandoc fenced divs
+# (`::: hero`, `::: catalogue`/`::: item`, `::: figure`, `::: contact-card`)
+# mark out the few structural blocks that need a CSS hook; everything inside
+# them — eyebrow labels, "by" lines, descriptions — is styled in styles.css by
+# position (`.hero > p:first-child`, `.item h3 + p`, …), not by HTML class
+# attributes on every paragraph. `md_extensions: -implicit_figures` is set so
+# a bare `![cover](x.jpg)` stays a plain image; the two pages that want a
+# captioned photo use an explicit `::: figure` div instead. See AGENTS.md.
 
 # The `theme:` block below is a bslib::bs_theme() specification expressed in YAML.
 # rmarkdown passes it straight to bslib, so the WordPress "Twenty Sixteen" fonts
@@ -32,6 +43,7 @@ output:
       "border-color": "#d1d1d1"
       "link-decoration": "none"
     css: styles.css
+    md_extensions: -implicit_figures
     includes:
       in_header: head.html
       before_body: header.html

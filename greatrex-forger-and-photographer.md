@@ -1,14 +1,12 @@
 ---
-title: "Greatrex – Forger and Photographer — Renaissance Press"
+title: "Greatrex – Forger and Photographer"
 ---
 
-<div class="hero">
-<span class="eyebrow">Book · by David Bruce</span>
+::: hero
+Book · by David Bruce
 
 # Greatrex – Forger and Photographer
-
-<p class="lede">£9.99</p>
-</div>
+:::
 
 ![Greatrex – Forger and Photographer](assets/greatrex-cover001-800x800-b.jpg)
 
@@ -20,6 +18,6 @@ His dubious career took him from England to Australia, Scotland and America - on
 
 [Also available on Kindle](http://www.amazon.co.uk/Greatrex-Forger-Photographer-David-Bruce-ebook/dp/B00KPGLRY2/ref=sr_1_1?ie=UTF8&qid=1416694007&sr=8-1&keywords=Greatrex+%E2%80%93+Forger+and+Photographer)
 
-<hr>
+---
 
-<p><a href="../contact.html">Order or enquire →</a> &nbsp;·&nbsp; <a href="../books.html">← Books</a> · <a href="../prints.html">Prints</a> · <a href="../folios.html">Folios</a></p>
+[← Books](books.html) · [Prints](prints.html) · [Folios](folios.html)

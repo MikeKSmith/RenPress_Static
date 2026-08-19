@@ -1,12 +1,12 @@
 ---
-title: "David Peat — Renaissance Press"
+title: "David Peat"
 ---
 
-<div class="hero">
-<span class="eyebrow">Artists &amp; Authors</span>
+::: hero
+Artists & Authors
 
 # David Peat
-</div>
+:::
 
 David Peat (1947 - 2012) was one of Scotland's leading film-makers and photographers. Best known as a film-maker for his closely observed documentaries which include - Gutted, This Mine is Ours, Me and My Face, Life's too Short, Please Leave the Light On etc.
 
@@ -16,6 +16,6 @@ He also made a number of arts films for cinema and television along with the acc
 
 When Peat was trying to find his way into the film and TV world, he built up a portfolio of photographs of children living in the slum areas of Glasgow - The Gorbals, Tradeston and Maryhill. These photographs taken in 1968, have become an historic record of times long gone. An Eye on Street is published as a reminder of past Glasgow lives, but also as a tribute to David Peat.
 
-<hr>
+---
 
-<p><a href="../people.html">← All artists &amp; authors</a></p>
+[← All artists & authors](people.html)

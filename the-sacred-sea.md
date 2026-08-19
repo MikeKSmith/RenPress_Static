@@ -1,14 +1,12 @@
 ---
-title: "The Sacred Sea — Renaissance Press"
+title: "The Sacred Sea"
 ---
 
-<div class="hero">
-<span class="eyebrow">Folio / Print · George Bruce &amp; John Bellany</span>
+::: hero
+Folio / Print · George Bruce & John Bellany
 
 # The Sacred Sea
-
-<p class="lede">Price on enquiry</p>
-</div>
+:::
 
 ![The Sacred Sea](assets/SS-3-Deathmask-of-a-fisherman.jpg)
 
@@ -16,12 +14,12 @@ In contrast to Woman of the North Sea, the second and final collaboration takes 
 
 Dimensions 17 x 15.5 inches; 44 x 39 cm.
 
-Price £1,500 per copy. Limited edition (30 copies signed by Bellany).
+Limited edition of 30 copies, signed by Bellany.
 
-A limited number of individual etchings are also available at £250 each.
+A limited number of individual etchings are also available separately.
 
-**Prospective purchasers are advised that as these are limited editions, they should make direct contact with Renaissance Press.**
+**Prospective purchasers are advised that, as these are limited editions, they should make direct contact with Renaissance Press for prices and availability.**
 
-<hr>
+---
 
-<p><a href="../contact.html">Order or enquire →</a> &nbsp;·&nbsp; <a href="../books.html">← Books</a> · <a href="../prints.html">Prints</a> · <a href="../folios.html">Folios</a></p>
+[← Books](books.html) · [Prints](prints.html) · [Folios](folios.html)

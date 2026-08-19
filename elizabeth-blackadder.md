@@ -1,12 +1,12 @@
 ---
-title: "Elizabeth Blackadder — Renaissance Press"
+title: "Elizabeth Blackadder"
 ---
 
-<div class="hero">
-<span class="eyebrow">Artists &amp; Authors</span>
+::: hero
+Artists & Authors
 
 # Elizabeth Blackadder
-</div>
+:::
 
 Dame Elizabeth Blackadder is one of Scotland’s finest painters. She was the first woman artist to be elected a member of both the Royal Academy and the Royal Scottish Academy. She is one of Britain’s most popular artists.
 
@@ -14,6 +14,6 @@ She studied at the Edinburgh College of Art and Edinburgh University – and b
 
 Elizabeth Blackadder is one of the most honoured artists of her generation. As well as a number of honorary degrees - in 2001 she was made The Queen’s Limner and Painter in Scotland.
 
-<hr>
+---
 
-<p><a href="../people.html">← All artists &amp; authors</a></p>
+[← All artists & authors](people.html)

@@ -71,9 +71,11 @@ body {
   border-top: 1px solid var(--rule);
 }
 
-/* Body copy sits on a readable measure; headings + rules run full width. */
-main > p, main > ul:not(.catalogue), main > ol, main > blockquote,
-.main-container > p, .main-container > ul:not(.catalogue), .main-container > ol {
+/* Body copy sits on a readable measure; headings + rules run full width.
+   (.catalogue is a plain <div> — see .catalogue's own max-width:none below —
+   so it never matches these selectors regardless.) */
+main > p, main > ul, main > ol, main > blockquote,
+.main-container > p, .main-container > ul, .main-container > ol {
   max-width: var(--measure);
 }
 
@@ -102,8 +104,9 @@ h3 {
 }
 h4 { font-size: 1.125rem; margin-top: 2em; }
 
-/* Eyebrow / meta label — Montserrat, letter-spaced, muted. */
-.eyebrow {
+/* Eyebrow / meta label — the first paragraph in .hero, before the <h1>.
+   Structural, not a class: Markdown just puts a line of text there. */
+.hero > p:first-child {
   display: inline-block;
   font-family: Montserrat, "Helvetica Neue", sans-serif;
   font-size: 11px;
@@ -114,7 +117,8 @@ h4 { font-size: 1.125rem; margin-top: 2em; }
   margin-bottom: 0.5rem;
 }
 
-.lede {
+/* Lede — a paragraph directly after the <h1> in .hero (e.g. an ISBN line). */
+.hero h1 + p {
   font-size: 1.3125rem;           /* 21px */
   line-height: 1.5;
   color: #333;
@@ -142,6 +146,23 @@ hr {
   border-bottom: 1px solid var(--rule);
   margin-bottom: 2.25rem;
 }
+
+/* --- Captioned photos (::: figure) -------------------------------------- */
+.figure {
+  margin: 2rem 0;
+}
+.figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.figure p:last-child {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  max-width: none;
+}
+.portrait { max-width: 320px; }
 
 /* --- Buttons (Twenty Sixteen) ------------------------------------------ */
 .btn, button, input[type="submit"] {
@@ -179,49 +200,21 @@ hr {
   line-height: 1.25;
   margin-top: 0;
 }
-.item .by {
+/* "By" line — the paragraph right after the title. */
+.item h3 + p {
   font-family: Merriweather, Georgia, serif;
   font-style: italic;
   font-size: 0.95rem;
   color: var(--muted);
   margin-bottom: 0.7rem;
 }
-.item .note {
+/* Description — the paragraph after that. */
+.item h3 + p + p {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #333;
   margin: 0 0 1rem;
   max-width: none;
-}
-.item .meta {
-  margin-top: auto;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding-top: 0.7rem;
-  border-top: 1px solid var(--rule);
-}
-.price {
-  font-family: Merriweather, Georgia, serif;
-  font-weight: 700;
-  font-size: 1.1875rem;
-  color: #000000;               /* custom CSS: .price { color:#000 } */
-}
-.price--sold {
-  color: var(--muted);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1rem;
-  text-decoration: line-through;
-}
-.tag {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 /* --- Contact block ----------------------------------------------------- */
@@ -233,6 +226,7 @@ hr {
   max-width: 34rem;
 }
 .contact-card p { margin: 0.4rem 0; max-width: none; }
+.contact-card p:first-child { margin-top: 0; }
 
 /* --- Masthead: site title, tagline, primary menu (Twenty Sixteen) ------- */
 .site-header-main { position: relative; }

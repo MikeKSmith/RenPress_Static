@@ -11,7 +11,7 @@
 
 
 
-<title>Books — Renaissance Press</title>
+<title>Books</title>
 
 <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -25,8 +25,10 @@
 <script src="site_libs/bs3compat-0.11.0/tabs.js"></script>
 <script src="site_libs/bs3compat-0.11.0/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<meta name="description" content="Renaissance Press — fine art books and limited-edition etchings.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Renaissance Press — a small Edinburgh publishing house specialising in the collaboration of poetry and art, home to work by George Bruce, Elizabeth Blackadder, John Bellany and Alan Spence.">
+<meta name="theme-color" content="#d5d5d5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -77,80 +79,6 @@ pre code {
 </style>
 
 
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
 
 <!-- tabsets -->
 
@@ -215,211 +143,160 @@ $(document).ready(function () {
 
 
 
+<header id="masthead" class="site-header" role="banner">
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Renaissance Press</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="books.html">Books</a>
-</li>
-<li>
-  <a href="prints.html">Prints</a>
-</li>
-<li>
-  <a href="folios.html">Folios</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="contact.html">Contact</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+  <div class="header-image">
+    <a data-rp-href="index.html" href="index.html" rel="home">
+      <img class="custom-header-image"
+           data-rp-src="assets/cropped-Untitled-design-1.png"
+           src="assets/cropped-Untitled-design-1.png"
+           alt="Renaissance Press">
+    </a>
+  </div><!-- .header-image -->
+
+  <div class="site-header-main">
+
+    <div class="site-branding">
+      <p class="site-title"><a data-rp-href="index.html" href="index.html" rel="home">Renaissance Press</a></p>
+      <p class="site-description">Edinburgh, Scotland</p>
+    </div><!-- .site-branding -->
+
+    <button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">Menu</button>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+      <div class="menu-primary-container">
+        <ul class="primary-menu">
+          <li class="menu-item"><a data-rp-href="index.html"   href="index.html">Home</a></li>
+          <li class="menu-item"><a data-rp-href="books.html"   href="books.html">Books</a></li>
+          <li class="menu-item"><a data-rp-href="prints.html"  href="prints.html">Prints</a></li>
+          <li class="menu-item"><a data-rp-href="folios.html"  href="folios.html">Folios</a></li>
+          <li class="menu-item"><a data-rp-href="contact.html" href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </nav><!-- .main-navigation -->
+
+  </div><!-- .site-header-main -->
+</header><!-- .site-header -->
+
+<script>
+/* Fix partial link paths for pages at any folder depth, and drive the mobile
+   menu toggle. The stylesheet link tells us the relative path back to the site
+   root (e.g. "../" inside products/ and people/). */
+document.addEventListener('DOMContentLoaded', function () {
+  var css = document.querySelector('link[href$="styles.css"]');
+  var base = css ? css.getAttribute('href').replace(/styles\.css$/, '') : '';
+  document.querySelectorAll('[data-rp-href]').forEach(function (a) {
+    a.setAttribute('href', base + a.getAttribute('data-rp-href'));
+  });
+  document.querySelectorAll('[data-rp-src]').forEach(function (el) {
+    el.setAttribute('src', base + el.getAttribute('data-rp-src'));
+  });
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('site-navigation');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('toggled');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+});
+</script>
 
 <div id="header">
 
 
 
-<h1 class="title toc-ignore">Books — Renaissance Press</h1>
+<h1 class="title toc-ignore">Books</h1>
 
 </div>
 
 
 <div class="hero">
-<p><span class="eyebrow">Catalogue</span></p>
+<p>Catalogue</p>
 <div id="books" class="section level1">
 <h1>Books</h1>
 </div>
 </div>
 <p>Poetry and art in collaboration.</p>
-<ul class="catalogue">
-<li class="item">
-<h3>
-<a href="products/letters-from-the-winding-nile-in-1857-william-kidston-writes-home.html">Letters
-from the Winding Nile</a>
-</h3>
-<p class="by">
-In 1857, William Kidston writes home
-</p>
-<p class="note">
-A Glasgow businessman’s letters from an 1856 expedition to Egypt and the
-Holy Land.
-</p>
-<div class="meta">
-<span class="price">£9.99</span><span class="tag">Book</span>
+<div class="catalogue">
+<div id="letters-from-the-winding-nile" class="section level3 item">
+<h3><a
+href="letters-from-the-winding-nile-in-1857-william-kidston-writes-home.html">Letters
+from the Winding Nile</a></h3>
+<p>In 1857, William Kidston writes home</p>
+<p>A Glasgow businessman’s letters from an 1856 expedition to Egypt and
+the Holy Land.</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/thirteen-ways-of-looking-at-tulips.html">Thirteen ways
-of looking at Tulips</a>
-</h3>
-<p class="by">
-Alan Spence, illustrated by Elizabeth Blackadder
-</p>
-<p class="note">
-A beautiful sequence of tulip haiku (2022).
-</p>
-<div class="meta">
-<span class="price">£7.99</span><span class="tag">Book</span>
+<div id="thirteen-ways-of-looking-at-tulips"
+class="section level3 item">
+<h3><a href="thirteen-ways-of-looking-at-tulips.html">Thirteen ways of
+looking at Tulips</a></h3>
+<p>Alan Spence, illustrated by Elizabeth Blackadder</p>
+<p>A beautiful sequence of tulip haiku (2022).</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/morning-glory.html">Morning Glory</a>
-</h3>
-<p class="by">
-Alan Spence, illustrated by Elizabeth Blackadder
-</p>
-<p class="note">
-A sequence of haiku and tanka — a follow-up to <em>Through the
-Letterbox</em>.
-</p>
-<div class="meta">
-<span class="price">£9.99</span><span class="tag">Book</span>
+<div id="morning-glory" class="section level3 item">
+<h3><a href="morning-glory.html">Morning Glory</a></h3>
+<p>Alan Spence, illustrated by Elizabeth Blackadder</p>
+<p>A sequence of haiku and tanka — a follow-up to <em>Through the
+Letterbox</em>.</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/through-the-letterbox.html">Through the Letterbox</a>
-</h3>
-<p class="by">
-George Bruce, illustrated by Elizabeth Blackadder
-</p>
-<p class="note">
-The book that began the Press: 157 haiku, 143 images.
-</p>
-<div class="meta">
-<span class="price">£9.99</span><span class="tag">Book</span>
+<div id="through-the-letterbox" class="section level3 item">
+<h3><a href="through-the-letterbox.html">Through the Letterbox</a></h3>
+<p>George Bruce, illustrated by Elizabeth Blackadder</p>
+<p>The book that began the Press: 157 haiku, 143 images.</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/a-brush-with-burns.html">A Brush with Burns</a>
-</h3>
-<p class="by">
-Robert Burns, illustrated by Elizabeth Blackadder
-</p>
-<p class="note">
-The words of the Scots bard, illustrated in Blackadder’s own original
-manner.
-</p>
-<div class="meta">
-<span class="price">£9.99</span><span class="tag">Book</span>
+<div id="a-brush-with-burns" class="section level3 item">
+<h3><a href="a-brush-with-burns.html">A Brush with Burns</a></h3>
+<p>Robert Burns, illustrated by Elizabeth Blackadder</p>
+<p>The words of the Scots bard, illustrated in Blackadder’s own original
+manner.</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/the-singing-of-the-foxes.html">The Singing of the
-Foxes</a>
-</h3>
-<p class="by">
-George Bruce, illustrations by John Bellany
-</p>
-<p class="note">
-Bruce’s final and uncollected poems (2007).
-</p>
-<div class="meta">
-<span class="price">£9.99</span><span class="tag">Book</span>
+<div id="the-singing-of-the-foxes" class="section level3 item">
+<h3><a href="the-singing-of-the-foxes.html">The Singing of the
+Foxes</a></h3>
+<p>George Bruce, illustrations by John Bellany</p>
+<p>Bruce’s final and uncollected poems (2007).</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/today-tomorrow.html">Today Tomorrow</a>
-</h3>
-<p class="by">
-George Bruce — collected poems 1933–2000
-</p>
-<p class="note">
-A lifetime’s poems, from a Scottish fishing port to the great painters
-of the world.
-</p>
-<div class="meta">
-<span class="price">£10.00</span><span class="tag">Book</span>
+<div id="today-tomorrow" class="section level3 item">
+<h3><a href="today-tomorrow.html">Today Tomorrow</a></h3>
+<p>George Bruce — collected poems 1933–2000</p>
+<p>A lifetime’s poems, from a Scottish fishing port to the great
+painters of the world.</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/greatrex-forger-and-photographer.html">Greatrex —
-Forger and Photographer</a>
-</h3>
-<p class="by">
-David Bruce
-</p>
-<p class="note">
-The true, disreputable tale of John Henry Greatrex (1827–76).
-</p>
-<div class="meta">
-<span class="price">£9.99</span><span class="tag">Book</span>
+<div id="greatrex-forger-and-photographer" class="section level3 item">
+<h3><a href="greatrex-forger-and-photographer.html">Greatrex — Forger
+and Photographer</a></h3>
+<p>David Bruce</p>
+<p>The true, disreputable tale of John Henry Greatrex (1827–76).</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/an-eye-on-the-street.html">An Eye on the Street</a>
-</h3>
-<p class="by">
-David Peat
-</p>
-<p class="note">
-Glasgow photographed in 1968. No longer available through Renaissance
-Press.
-</p>
-<div class="meta">
-<span class="price price--sold">£9.99</span><span class="tag">Out of
-stock</span>
+<div id="an-eye-on-the-street" class="section level3 item">
+<h3><a href="an-eye-on-the-street.html">An Eye on the Street</a></h3>
+<p>David Peat</p>
+<p>Glasgow photographed in 1968. No longer available through Renaissance
+Press.</p>
 </div>
-</li>
-</ul>
-<hr>
-<p>
-<a href="prints.html">Prints →</a>  ·  <a href="folios.html">Folios
-→</a>  ·  <a href="contact.html">Order without PayPal →</a>
-</p>
+</div>
+<hr />
+<p><a href="prints.html">Prints →</a> · <a href="folios.html">Folios
+→</a> · <a href="contact.html">Order without PayPal →</a></p>
 
-<footer class="site-footer">
-  <div class="container">
-    <nav class="footer-nav">
-      <a href="people.html">Artists &amp; Authors</a>
-      &nbsp;&middot;&nbsp;
-      <a href="elizabeth-blackadder-1931-2021.html">Elizabeth Blackadder 1931–2021</a>
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <nav class="footer-navigation" aria-label="Footer Menu">
+      <a data-rp-href="index.html"   href="index.html">Home</a> ·
+      <a data-rp-href="books.html"   href="books.html">Books</a> ·
+      <a data-rp-href="prints.html"  href="prints.html">Prints</a> ·
+      <a data-rp-href="folios.html"  href="folios.html">Folios</a> ·
+      <a data-rp-href="people.html"  href="people.html">Artists &amp; Authors</a> ·
+      <a data-rp-href="contact.html" href="contact.html">Contact us</a>
     </nav>
-    <p class="copyright">&copy; Renaissance Press. All rights reserved.</p>
-  </div>
-</footer>
+    <p class="footer-contact">Renaissance Press · c/o 59 Hunter Rd, Milngavie, Scotland G62 7DJ ·
+       (+44) 07813 309150 ·
+       <a href="mailto:info@renaissancepress.co.uk">info@renaissancepress.co.uk</a></p>
+    <p class="footer-note">© 2026 Renaissance Press · Edinburgh, Scotland.
+       In memory of Lucina Prestige, founder.</p>
+  </div><!-- .site-info -->
+</footer><!-- .site-footer -->
 
 
 

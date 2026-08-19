@@ -11,7 +11,7 @@
 
 
 
-<title>Folios — Renaissance Press</title>
+<title>Folios</title>
 
 <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -25,8 +25,10 @@
 <script src="site_libs/bs3compat-0.11.0/tabs.js"></script>
 <script src="site_libs/bs3compat-0.11.0/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<meta name="description" content="Renaissance Press — fine art books and limited-edition etchings.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Renaissance Press — a small Edinburgh publishing house specialising in the collaboration of poetry and art, home to work by George Bruce, Elizabeth Blackadder, John Bellany and Alan Spence.">
+<meta name="theme-color" content="#d5d5d5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -77,80 +79,6 @@ pre code {
 </style>
 
 
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
 
 <!-- tabsets -->
 
@@ -215,52 +143,76 @@ $(document).ready(function () {
 
 
 
+<header id="masthead" class="site-header" role="banner">
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Renaissance Press</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="books.html">Books</a>
-</li>
-<li>
-  <a href="prints.html">Prints</a>
-</li>
-<li>
-  <a href="folios.html">Folios</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="contact.html">Contact</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+  <div class="header-image">
+    <a data-rp-href="index.html" href="index.html" rel="home">
+      <img class="custom-header-image"
+           data-rp-src="assets/cropped-Untitled-design-1.png"
+           src="assets/cropped-Untitled-design-1.png"
+           alt="Renaissance Press">
+    </a>
+  </div><!-- .header-image -->
+
+  <div class="site-header-main">
+
+    <div class="site-branding">
+      <p class="site-title"><a data-rp-href="index.html" href="index.html" rel="home">Renaissance Press</a></p>
+      <p class="site-description">Edinburgh, Scotland</p>
+    </div><!-- .site-branding -->
+
+    <button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">Menu</button>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+      <div class="menu-primary-container">
+        <ul class="primary-menu">
+          <li class="menu-item"><a data-rp-href="index.html"   href="index.html">Home</a></li>
+          <li class="menu-item"><a data-rp-href="books.html"   href="books.html">Books</a></li>
+          <li class="menu-item"><a data-rp-href="prints.html"  href="prints.html">Prints</a></li>
+          <li class="menu-item"><a data-rp-href="folios.html"  href="folios.html">Folios</a></li>
+          <li class="menu-item"><a data-rp-href="contact.html" href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </nav><!-- .main-navigation -->
+
+  </div><!-- .site-header-main -->
+</header><!-- .site-header -->
+
+<script>
+/* Fix partial link paths for pages at any folder depth, and drive the mobile
+   menu toggle. The stylesheet link tells us the relative path back to the site
+   root (e.g. "../" inside products/ and people/). */
+document.addEventListener('DOMContentLoaded', function () {
+  var css = document.querySelector('link[href$="styles.css"]');
+  var base = css ? css.getAttribute('href').replace(/styles\.css$/, '') : '';
+  document.querySelectorAll('[data-rp-href]').forEach(function (a) {
+    a.setAttribute('href', base + a.getAttribute('data-rp-href'));
+  });
+  document.querySelectorAll('[data-rp-src]').forEach(function (el) {
+    el.setAttribute('src', base + el.getAttribute('data-rp-src'));
+  });
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('site-navigation');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('toggled');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+});
+</script>
 
 <div id="header">
 
 
 
-<h1 class="title toc-ignore">Folios — Renaissance Press</h1>
+<h1 class="title toc-ignore">Folios</h1>
 
 </div>
 
 
 <div class="hero">
-<p><span class="eyebrow">Catalogue</span></p>
+<p>Catalogue</p>
 <div id="folios-portfolios" class="section level1">
 <h1>Folios &amp; Portfolios</h1>
 </div>
@@ -268,56 +220,44 @@ $(document).ready(function () {
 <p>Two collaborations between the poet George Bruce and the painter John
 Bellany, born of a shared background in the fishing communities of the
 North Sea. As limited editions, they are best purchased by <a
-href="contact.html">contacting the Press directly</a>.</p>
-<ul class="catalogue">
-<li class="item">
-<h3>
-<a href="products/woman-of-the-north-sea.html">Woman of the North
-Sea</a>
-</h3>
-<p class="by">
-George Bruce &amp; John Bellany
-</p>
-<p class="note">
-Bruce’s poems in response to Bellany’s etchings (2002). 69 × 57 cm.
-Limited edition of 50, signed by both.
-</p>
-<div class="meta">
-<span class="price">£2,000</span><span class="tag">Portfolio</span>
+href="contact.html">contacting the Press directly</a>, who will advise
+on prices and availability.</p>
+<div class="catalogue">
+<div id="woman-of-the-north-sea" class="section level3 item">
+<h3><a href="woman-of-the-north-sea.html">Woman of the North
+Sea</a></h3>
+<p>George Bruce &amp; John Bellany</p>
+<p>Bruce’s poems in response to Bellany’s etchings (2002). 69 × 57 cm.
+Limited edition of 50, signed by both.</p>
 </div>
-</li>
-<li class="item">
-<h3>
-<a href="products/the-sacred-sea.html">The Sacred Sea</a>
-</h3>
-<p class="by">
-George Bruce &amp; John Bellany
-</p>
-<p class="note">
-Bellany’s etchings responding to seven of Bruce’s best-known poems. 44 ×
-39 cm. Limited edition of 30, signed by Bellany.
-</p>
-<div class="meta">
-<span class="price">£1,500</span><span class="tag">Portfolio</span>
+<div id="the-sacred-sea" class="section level3 item">
+<h3><a href="the-sacred-sea.html">The Sacred Sea</a></h3>
+<p>George Bruce &amp; John Bellany</p>
+<p>Bellany’s etchings responding to seven of Bruce’s best-known poems.
+44 × 39 cm. Limited edition of 30, signed by Bellany.</p>
 </div>
-</li>
-</ul>
-<hr>
-<p>
-<a href="books.html">Books →</a>  ·  <a href="prints.html">Individual
-prints →</a>  ·  <a href="contact.html">Enquire →</a>
-</p>
+</div>
+<hr />
+<p><a href="books.html">Books →</a> · <a href="prints.html">Individual
+prints →</a> · <a href="contact.html">Enquire →</a></p>
 
-<footer class="site-footer">
-  <div class="container">
-    <nav class="footer-nav">
-      <a href="people.html">Artists &amp; Authors</a>
-      &nbsp;&middot;&nbsp;
-      <a href="elizabeth-blackadder-1931-2021.html">Elizabeth Blackadder 1931–2021</a>
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <nav class="footer-navigation" aria-label="Footer Menu">
+      <a data-rp-href="index.html"   href="index.html">Home</a> ·
+      <a data-rp-href="books.html"   href="books.html">Books</a> ·
+      <a data-rp-href="prints.html"  href="prints.html">Prints</a> ·
+      <a data-rp-href="folios.html"  href="folios.html">Folios</a> ·
+      <a data-rp-href="people.html"  href="people.html">Artists &amp; Authors</a> ·
+      <a data-rp-href="contact.html" href="contact.html">Contact us</a>
     </nav>
-    <p class="copyright">&copy; Renaissance Press. All rights reserved.</p>
-  </div>
-</footer>
+    <p class="footer-contact">Renaissance Press · c/o 59 Hunter Rd, Milngavie, Scotland G62 7DJ ·
+       (+44) 07813 309150 ·
+       <a href="mailto:info@renaissancepress.co.uk">info@renaissancepress.co.uk</a></p>
+    <p class="footer-note">© 2026 Renaissance Press · Edinburgh, Scotland.
+       In memory of Lucina Prestige, founder.</p>
+  </div><!-- .site-info -->
+</footer><!-- .site-footer -->
 
 
 

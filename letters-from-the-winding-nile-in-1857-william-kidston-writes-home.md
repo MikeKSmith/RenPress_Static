@@ -1,19 +1,17 @@
 ---
-title: "Letters from the Winding Nile - In 1857 William Kidston writes home — Renaissance Press"
+title: "Letters from the Winding Nile - In 1857 William Kidston writes home"
 ---
 
-<div class="hero">
-<span class="eyebrow">Book</span>
+::: hero
+Book
 
 # Letters from the Winding Nile - In 1857 William Kidston writes home
-
-<p class="lede">£9.99</p>
-</div>
+:::
 
 ![Letters from the Winding Nile - In 1857 William Kidston writes home](assets/Cover-image-scaled.jpg)
 
 In 1856, a prosperous Glasgow businessman, William Kidston (1813 - 1889), set out with two companions on an expedition to Egypt and the Holy Land. As he travelled through Europe, across the Mediterranean, and into the Middle East, he wrote letters to his sister to tell of his progress and of the extraordinary sights and people he encountered. But William had another purpose beyond the pleasure of tourism; as a founding member of the Free Church of Scotland he was determined to find evidence for the truth of the Bible. William's handwriting may have been hard to decipher, but his descriptions and humour; not least in Egypt, provide a vivid insight into the life, times and interests of a Victorian gentleman with means and a mission.
 
-<hr>
+---
 
-<p><a href="../contact.html">Order or enquire →</a> &nbsp;·&nbsp; <a href="../books.html">← Books</a> · <a href="../prints.html">Prints</a> · <a href="../folios.html">Folios</a></p>
+[← Books](books.html) · [Prints](prints.html) · [Folios](folios.html)

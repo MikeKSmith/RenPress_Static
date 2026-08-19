@@ -25,8 +25,10 @@
 <script src="site_libs/bs3compat-0.11.0/tabs.js"></script>
 <script src="site_libs/bs3compat-0.11.0/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<meta name="description" content="Renaissance Press — fine art books and limited-edition etchings.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Renaissance Press — a small Edinburgh publishing house specialising in the collaboration of poetry and art, home to work by George Bruce, Elizabeth Blackadder, John Bellany and Alan Spence.">
+<meta name="theme-color" content="#d5d5d5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -77,80 +79,6 @@ pre code {
 </style>
 
 
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
 
 <!-- tabsets -->
 
@@ -215,40 +143,64 @@ $(document).ready(function () {
 
 
 
+<header id="masthead" class="site-header" role="banner">
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Renaissance Press</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="books.html">Books</a>
-</li>
-<li>
-  <a href="prints.html">Prints</a>
-</li>
-<li>
-  <a href="folios.html">Folios</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="contact.html">Contact</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+  <div class="header-image">
+    <a data-rp-href="index.html" href="index.html" rel="home">
+      <img class="custom-header-image"
+           data-rp-src="assets/cropped-Untitled-design-1.png"
+           src="assets/cropped-Untitled-design-1.png"
+           alt="Renaissance Press">
+    </a>
+  </div><!-- .header-image -->
+
+  <div class="site-header-main">
+
+    <div class="site-branding">
+      <p class="site-title"><a data-rp-href="index.html" href="index.html" rel="home">Renaissance Press</a></p>
+      <p class="site-description">Edinburgh, Scotland</p>
+    </div><!-- .site-branding -->
+
+    <button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">Menu</button>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+      <div class="menu-primary-container">
+        <ul class="primary-menu">
+          <li class="menu-item"><a data-rp-href="index.html"   href="index.html">Home</a></li>
+          <li class="menu-item"><a data-rp-href="books.html"   href="books.html">Books</a></li>
+          <li class="menu-item"><a data-rp-href="prints.html"  href="prints.html">Prints</a></li>
+          <li class="menu-item"><a data-rp-href="folios.html"  href="folios.html">Folios</a></li>
+          <li class="menu-item"><a data-rp-href="contact.html" href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </nav><!-- .main-navigation -->
+
+  </div><!-- .site-header-main -->
+</header><!-- .site-header -->
+
+<script>
+/* Fix partial link paths for pages at any folder depth, and drive the mobile
+   menu toggle. The stylesheet link tells us the relative path back to the site
+   root (e.g. "../" inside products/ and people/). */
+document.addEventListener('DOMContentLoaded', function () {
+  var css = document.querySelector('link[href$="styles.css"]');
+  var base = css ? css.getAttribute('href').replace(/styles\.css$/, '') : '';
+  document.querySelectorAll('[data-rp-href]').forEach(function (a) {
+    a.setAttribute('href', base + a.getAttribute('data-rp-href'));
+  });
+  document.querySelectorAll('[data-rp-src]').forEach(function (el) {
+    el.setAttribute('src', base + el.getAttribute('data-rp-src'));
+  });
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('site-navigation');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('toggled');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+});
+</script>
 
 <div id="header">
 
@@ -261,19 +213,13 @@ Press</h1>
 
 
 <div class="hero">
-<p><span class="eyebrow">Book · by George Bruce · illustrated by
-Elizabeth Blackadder</span></p>
+<p>Book · by George Bruce · illustrated by Elizabeth Blackadder</p>
 <div id="through-the-letterbox" class="section level1">
 <h1>Through the Letterbox</h1>
-<p class="lede">
-£9.99  ·  ISBN 0-9543961-0-3
-</p>
+<p>ISBN 0-9543961-0-3</p>
 </div>
 </div>
-<div class="float">
-<img src="assets/letterbox.jpg" alt="Through the Letterbox" />
-<div class="figcaption">Through the Letterbox</div>
-</div>
+<p><img src="assets/letterbox.jpg" alt="Through the Letterbox" /></p>
 <p>This charming book is the result of a unique collaboration by two
 leading practitioners in their fields, the poet George Bruce and the
 artist Elizabeth Blackadder. The title refers to George Bruce’s habit of
@@ -286,41 +232,44 @@ illustrated by Elizabeth Blackadder. Bruce’s great sense of humour is
 fully evident is these delightful seventeen-syllable poems, modelled on
 the Japanese haiku, but so also is his capacity to stir deep feeling in
 the fewest possible words.</p>
-<p><a href="../people/george-bruce.html">George Bruce</a>, who died in
-2002 at the age of 93, was one of the last major figures of the Scottish
-Literary Renaissance of the twentieth century. His poetry ranges from
-the evocation of his origins in the port of Fraserburgh on Scotland’s
+<p><a href="george-bruce.html">George Bruce</a>, who died in 2002 at the
+age of 93, was one of the last major figures of the Scottish Literary
+Renaissance of the twentieth century. His poetry ranges from the
+evocation of his origins in the port of Fraserburgh on Scotland’s
 north-east coast through philosophical, personal and contemporary issues
 to the ironic and light-hearted. In 1999, at the age of ninety, he won
 the Saltire Prize for the best Scottish book of the year for his
 collection, Pursuit: poems 1986-1998.</p>
-<p><a href="../people/elizabeth-blackadder.html">Elizabeth
-Blackadder</a> is one of Britain’s favourite artists. She worked with
-George Bruce on Through the Letterbox in the year before he died. Her
-instinctive economy of style and her particular interest in Japanese art
-makes her the ideal illustrator for such a book. Her cats, flowers and
-Japanese symbols are a perfect response to Bruce’s poems. The format of
-the book, A5 landscape, provides just the right shape and space for this
-delightful combination of words and images. Elizabeth Blackadder is the
-Queen’s Limner in Scotland and is a Dame of the British Empire.</p>
-<hr>
-<p>
-<a href="../contact.html">Order or enquire →</a>  · 
-<a href="../books.html">← Books</a> ·
-<a href="../prints.html">Prints</a> ·
-<a href="../folios.html">Folios</a>
-</p>
+<p><a href="elizabeth-blackadder.html">Elizabeth Blackadder</a> is one
+of Britain’s favourite artists. She worked with George Bruce on Through
+the Letterbox in the year before he died. Her instinctive economy of
+style and her particular interest in Japanese art makes her the ideal
+illustrator for such a book. Her cats, flowers and Japanese symbols are
+a perfect response to Bruce’s poems. The format of the book, A5
+landscape, provides just the right shape and space for this delightful
+combination of words and images. Elizabeth Blackadder is the Queen’s
+Limner in Scotland and is a Dame of the British Empire.</p>
+<hr />
+<p><a href="books.html">← Books</a> · <a href="prints.html">Prints</a> ·
+<a href="folios.html">Folios</a></p>
 
-<footer class="site-footer">
-  <div class="container">
-    <nav class="footer-nav">
-      <a href="people.html">Artists &amp; Authors</a>
-      &nbsp;&middot;&nbsp;
-      <a href="elizabeth-blackadder-1931-2021.html">Elizabeth Blackadder 1931–2021</a>
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <nav class="footer-navigation" aria-label="Footer Menu">
+      <a data-rp-href="index.html"   href="index.html">Home</a> ·
+      <a data-rp-href="books.html"   href="books.html">Books</a> ·
+      <a data-rp-href="prints.html"  href="prints.html">Prints</a> ·
+      <a data-rp-href="folios.html"  href="folios.html">Folios</a> ·
+      <a data-rp-href="people.html"  href="people.html">Artists &amp; Authors</a> ·
+      <a data-rp-href="contact.html" href="contact.html">Contact us</a>
     </nav>
-    <p class="copyright">&copy; Renaissance Press. All rights reserved.</p>
-  </div>
-</footer>
+    <p class="footer-contact">Renaissance Press · c/o 59 Hunter Rd, Milngavie, Scotland G62 7DJ ·
+       (+44) 07813 309150 ·
+       <a href="mailto:info@renaissancepress.co.uk">info@renaissancepress.co.uk</a></p>
+    <p class="footer-note">© 2026 Renaissance Press · Edinburgh, Scotland.
+       In memory of Lucina Prestige, founder.</p>
+  </div><!-- .site-info -->
+</footer><!-- .site-footer -->
 
 
 

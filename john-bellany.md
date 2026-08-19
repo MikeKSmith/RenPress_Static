@@ -1,12 +1,12 @@
 ---
-title: "John Bellany — Renaissance Press"
+title: "John Bellany"
 ---
 
-<div class="hero">
-<span class="eyebrow">Artists &amp; Authors</span>
+::: hero
+Artists & Authors
 
 # John Bellany
-</div>
+:::
 
 John Bellany CBE RA HRSA
 
@@ -16,6 +16,6 @@ As John Bellany’s work developed, his iconography became broader – tackling 
 
 He works in London, Edinburgh and Barga, Italy.
 
-<hr>
+---
 
-<p><a href="../people.html">← All artists &amp; authors</a></p>
+[← All artists & authors](people.html)

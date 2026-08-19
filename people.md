@@ -1,23 +1,66 @@
 ---
-title: "Artists & Authors — Renaissance Press"
+title: "Artists & Authors"
 ---
 
-<div class="hero">
-<span class="eyebrow">The circle</span>
+::: hero
+The circle
 
-# Artists &amp; Authors
-</div>
+# Artists & Authors
+:::
 
 The books and folios of Renaissance Press grow out of friendships between poets
 and painters.
 
-<ul class="catalogue">
-<li class="item"><h3><a href="people/george-bruce.html">George Bruce</a></h3><p class="by">Poet, 1909–2002</p><p class="note">A leading figure of the Scottish Literary Renaissance; a poet of the sea.</p></li>
-<li class="item"><h3><a href="people/elizabeth-blackadder.html">Elizabeth Blackadder</a></h3><p class="by">Artist, 1931–2021</p><p class="note">One of Scotland's finest painters; the Queen's Limner in Scotland.</p></li>
-<li class="item"><h3><a href="people/john-bellany.html">John Bellany</a></h3><p class="by">Artist, 1942–2013</p><p class="note">One of the most influential Scottish painters since the war.</p></li>
-<li class="item"><h3><a href="people/alan-spence.html">Alan Spence</a></h3><p class="by">Poet &amp; novelist</p><p class="note">A master of haiku, and Edinburgh's Makar.</p></li>
-<li class="item"><h3><a href="people/david-bruce.html">David Bruce</a></h3><p class="by">Author &amp; film historian</p><p class="note">Author of <em>Greatrex — Forger and Photographer</em>.</p></li>
-<li class="item"><h3><a href="people/david-peat.html">David Peat</a></h3><p class="by">Photographer &amp; film-maker, 1947–2012</p><p class="note">Whose 1968 Glasgow photographs became <em>An Eye on the Street</em>.</p></li>
-</ul>
+::: catalogue
 
-<p><a href="elizabeth-blackadder-1931-2021.html">In memoriam: Elizabeth Blackadder (1931–2021) →</a></p>
+::: item
+### [George Bruce](george-bruce.html)
+
+Poet, 1909–2002
+
+A leading figure of the Scottish Literary Renaissance; a poet of the sea.
+:::
+
+::: item
+### [Elizabeth Blackadder](elizabeth-blackadder.html)
+
+Artist, 1931–2021
+
+One of Scotland's finest painters; the Queen's Limner in Scotland.
+:::
+
+::: item
+### [John Bellany](john-bellany.html)
+
+Artist, 1942–2013
+
+One of the most influential Scottish painters since the war.
+:::
+
+::: item
+### [Alan Spence](alan-spence.html)
+
+Poet & novelist
+
+A master of haiku, and Edinburgh's Makar.
+:::
+
+::: item
+### [David Bruce](david-bruce.html)
+
+Author & film historian
+
+Author of *Greatrex — Forger and Photographer*.
+:::
+
+::: item
+### [David Peat](david-peat.html)
+
+Photographer & film-maker, 1947–2012
+
+Whose 1968 Glasgow photographs became *An Eye on the Street*.
+:::
+
+:::
+
+[In memoriam: Elizabeth Blackadder (1931–2021) →](elizabeth-blackadder-1931-2021.html)

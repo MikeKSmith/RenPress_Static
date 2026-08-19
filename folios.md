@@ -1,40 +1,39 @@
 ---
-title: "Folios — Renaissance Press"
+title: "Folios"
 ---
 
-<div class="hero">
-<span class="eyebrow">Catalogue</span>
+::: hero
+Catalogue
 
-# Folios &amp; Portfolios
-</div>
+# Folios & Portfolios
+:::
 
 Two collaborations between the poet George Bruce and the painter John Bellany,
 born of a shared background in the fishing communities of the North Sea. As
 limited editions, they are best purchased by
-[contacting the Press directly](contact.html).
+[contacting the Press directly](contact.html), who will advise on prices and
+availability.
 
-<ul class="catalogue">
+::: catalogue
 
-<li class="item">
-  <h3><a href="products/woman-of-the-north-sea.html">Woman of the North Sea</a></h3>
-  <p class="by">George Bruce &amp; John Bellany</p>
-  <p class="note">Bruce's poems in response to Bellany's etchings (2002).
-  69 × 57 cm. Limited edition of 50, signed by both.</p>
-  <div class="meta"><span class="price">£2,000</span><span class="tag">Portfolio</span></div>
-</li>
+::: item
+### [Woman of the North Sea](woman-of-the-north-sea.html)
 
-<li class="item">
-  <h3><a href="products/the-sacred-sea.html">The Sacred Sea</a></h3>
-  <p class="by">George Bruce &amp; John Bellany</p>
-  <p class="note">Bellany's etchings responding to seven of Bruce's best-known
-  poems. 44 × 39 cm. Limited edition of 30, signed by Bellany.</p>
-  <div class="meta"><span class="price">£1,500</span><span class="tag">Portfolio</span></div>
-</li>
+George Bruce & John Bellany
 
-</ul>
+Bruce's poems in response to Bellany's etchings (2002). 69 × 57 cm. Limited edition of 50, signed by both.
+:::
 
-<hr>
+::: item
+### [The Sacred Sea](the-sacred-sea.html)
 
-<p><a href="books.html">Books →</a> &nbsp;·&nbsp;
-<a href="prints.html">Individual prints →</a> &nbsp;·&nbsp;
-<a href="contact.html">Enquire →</a></p>
+George Bruce & John Bellany
+
+Bellany's etchings responding to seven of Bruce's best-known poems. 44 × 39 cm. Limited edition of 30, signed by Bellany.
+:::
+
+:::
+
+---
+
+[Books →](books.html) · [Individual prints →](prints.html) · [Enquire →](contact.html)

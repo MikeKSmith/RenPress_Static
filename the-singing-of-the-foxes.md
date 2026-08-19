@@ -1,14 +1,14 @@
 ---
-title: "The Singing of the Foxes — Renaissance Press"
+title: "The Singing of the Foxes"
 ---
 
-<div class="hero">
-<span class="eyebrow">Book · by George Bruce · illustrations by John Bellany</span>
+::: hero
+Book · by George Bruce · illustrations by John Bellany
 
 # The Singing of the Foxes
 
-<p class="lede">£9.99 &nbsp;·&nbsp; ISBN 978-0-9543961-1-4</p>
-</div>
+ISBN 978-0-9543961-1-4
+:::
 
 ![The Singing of the Foxes](assets/foxes2.jpg)
 
@@ -18,6 +18,6 @@ The book begins with a number of poems written especially for the artist John Be
 
 by George Bruce. Illustrations by John Bellany. Collected and edited by Lucina Prestige.
 
-<hr>
+---
 
-<p><a href="../contact.html">Order or enquire →</a> &nbsp;·&nbsp; <a href="../books.html">← Books</a> · <a href="../prints.html">Prints</a> · <a href="../folios.html">Folios</a></p>
+[← Books](books.html) · [Prints](prints.html) · [Folios](folios.html)
