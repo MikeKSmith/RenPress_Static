@@ -1,5 +1,5 @@
 name: "renaissance-press"
-output_dir: "_site"
+output_dir: "docs"
 exclude: ["build.R", "theme.R", "README.md", "README.html", "README_files",
           "AGENTS.md", "LICENSE", "head.html", "header.html", "footer.html",
           "*.Rproj"]
