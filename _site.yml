@@ -1,8 +1,9 @@
 name: "renaissance-press"
 output_dir: "docs"
 exclude: ["build.R", "theme.R", "README.md", "README.html", "README_files",
-          "AGENTS.md", "LICENSE", "head.html", "header.html", "footer.html",
+          "AGENTS.md", "AGENTS.html", "LICENSE", "head.html", "header.html", "footer.html",
           "*.Rproj"]
+include: ["CNAME", ".nojekyll"]
 
 # The site masthead and footer are hand-built partials (header.html / footer.html)
 # that mirror the WordPress "Twenty Sixteen" markup (site-header / site-footer),
